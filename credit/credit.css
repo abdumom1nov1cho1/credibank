@@ -1,0 +1,1038 @@
+:root {
+  --greyblue: #6a7e9c;
+  --white: #fff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth; /**  Плавный спуск  */
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: rgb(231, 238, 255);
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+/*! ================= PRELOADER ====================  */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+
+  width: 100%;
+  height: 100vh;
+
+  background: #000 url(../img/1474.gif) no-repeat center center;
+}
+
+/*! ================= BASIC FLEX ====================  */
+
+.header__nav,
+.logo,
+.info,
+.icons,
+.kurs,
+.footer,
+.footer__inner,
+.footer-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.sucExit {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 18px;
+  padding: 16px 10px;
+  width: 300px;
+  margin: 0 auto;
+  border-radius: 10px;
+  border: 1px solid green;
+
+  background-color: rgb(58, 209, 58);
+
+  opacity: 0;
+  z-index: -1;
+
+  transition: all 0.5s ease;
+}
+
+.success {
+  opacity: 1;
+  z-index: 999;
+}
+
+/*! ================= HEADER ====================  */
+
+.header__nav {
+  position: relative;
+
+  justify-content: space-between;
+  gap: 20px;
+
+  height: min-content;
+  padding: 10px 30px;
+
+  background-color: #19193d;
+  box-shadow: 0px 0px 10px 1px rgba(25, 25, 62, 0.3);
+}
+
+/*? ====================== LOGO ============================   */
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+}
+
+.logo-txt {
+  font-size: 20px;
+  color: var(--white);
+}
+
+/*? ====================== INFO ============================   */
+.info,
+.info_inner {
+  position: relative;
+  height: 100%;
+}
+
+.info_inner:after {
+  content: "";
+  position: absolute;
+  top: calc(100% + 2px);
+  display: block;
+  width: 100%;
+  height: 0px;
+  background-color: var(--white);
+  transition: all 0.1s;
+}
+.info_inner:hover::after {
+  height: 2px;
+}
+
+.info {
+  font-size: 18px;
+}
+
+/*? ====================== ICONS ============================   */
+
+.fa-solid {
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--white);
+}
+.fa-xmark {
+  font-size: 25px;
+  color: var(--white);
+}
+
+.burger {
+  display: none;
+  color: var(--white);
+}
+
+/** ====================== Login--Logout ============================   */
+.Login--Logout {
+  font-size: 18px;
+  padding: 4px 8px;
+  margin-left: 20px;
+
+  border-radius: 5px;
+  color: var(--white);
+  border: 2px solid white;
+
+  cursor: pointer;
+}
+
+.userNow {
+  font-size: 18px;
+  color: var(--white);
+}
+
+.logout {
+  display: none;
+}
+.login {
+  display: block;
+}
+
+/*? ====================== SEARCH BAR ============================   */
+
+.searchbar {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+
+  width: 100%;
+  height: 100px;
+  padding: 0 50px;
+
+  background-color: #19193d;
+  box-shadow: 0px 0px 15px 1px rgba(25, 25, 62, 0.3);
+
+  transform: translateY(-100%);
+  transition: all 0.15s ease;
+}
+
+.searcher {
+  background: transparent;
+  outline: none;
+  border: none;
+
+  width: 100%;
+  font-size: 20px;
+  color: var(--white);
+}
+.searcher::placeholder {
+  color: var(--white);
+}
+
+/*! ================================ CONTENT ================================  */
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ПИСАТЬ ТУТ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+#user {
+  padding: 10px; /* Изменения */
+  outline: none;
+  text-decoration: none;
+  width: 30%;
+  border-radius: 5px; /* Изменения */
+}
+#email {
+  padding: 10px; /* Изменения */
+  width: 30%;
+  border-radius: 5px; /* Изменения */
+  outline: none; /* Изменения */
+  text-decoration: none; /* Изменения */
+}
+#password {
+  padding: 10px; /* Изменения */
+  width: 30%;
+  border-radius: 5px; /* Изменения */
+  outline: none; /* Изменения */
+  text-decoration: none; /* Изменения */
+}
+#month {
+  pointer-events: none;
+}
+#year {
+  pointer-events: none;
+}
+.text__container {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5px;
+  padding: 10px;
+  background-color: #caccf5;
+  border-radius: 5px;
+}
+
+.card2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5px;
+  
+  border-radius: 5px;
+  background-color: rgba(231, 165, 0, 0.301);
+  padding: 10px;
+}
+
+h3{
+  border-bottom: 1.5px solid black;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.loan {
+  display: none;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  gap: 10px;
+
+  background-color: #caccf5;
+}
+.form__item {
+  width: 45%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.form__item__inner {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+
+  gap: 10px;
+}
+#loan__inner {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 120px;
+  padding: 20px;
+  width: 100%;
+}
+.inputs {
+  padding: 20px; /* Изменения */
+  font-size: 16px; /* Изменения */
+  border-radius: 5px; /* Изменения */
+}
+.range__inner {
+  /* Изменения */
+  display: flex;
+  justify-content: space-around;
+}
+.i-l {
+  /* Изменения */
+  width: 2px;
+  height: 9px;
+  background-color: #000;
+}
+.lg {
+  /* Изменения */
+
+  height: 14px;
+  background-color: #9c3589;
+}
+.range__sum__inner {
+  /* Изменения */
+
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 102.5%;
+}
+.range__input {
+  /* Изменения */
+
+  appearance: none;
+
+  height: 7px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 5px;
+  background-image: repeating-radial-gradient(#a15ca1, #a15ca1);
+  background-size: 0%;
+  background-repeat: no-repeat;
+}
+.range__input::-webkit-slider-runnable-track {
+  /* Изменения */
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+}
+.range__input::-webkit-slider-thumb {
+  /* Изменения */
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: repeating-radial-gradient(#a15ca1, #a15ca1);
+  cursor: pointer;
+  box-shadow: 0 0 2px 0 #555;
+  transition: 0.3s ease-in-out;
+}
+.container__count {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.name__count {
+  font-size: 16px;
+}
+.count {
+  width: 20%;
+
+  padding: 8px;
+
+  font-size: 16px;
+  pointer-events: none;
+  border-radius: 8px;
+}
+.button__credit {
+  text-decoration: none;
+  border: none;
+  background-color: #0950a4;
+  border-radius: 5px;
+  padding: 10px 0;
+  width: 40%;
+  transition: 0.5s;
+
+  color: #fff;
+  font-size: 16px;
+}
+.button__credit:hover {
+  background-color: blue;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.popUp {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  font-size: 18px;
+  padding: 16px 10px;
+
+  border-radius: 10px;
+
+  border: 1px solid black;
+  margin: 0 auto;
+
+  opacity: 0;
+  z-index: -1;
+
+  transform: translateX(-50%);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.popUpNone {
+  opacity: 1;
+  z-index: 999;
+}
+/*! ================================ FOOTER ================================ */
+
+.footer {
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 200px;
+  margin-top: 50px;
+  padding: 30px 20px;
+
+  background-color: #19193d;
+}
+
+.footer__inner {
+  width: 100%;
+  justify-content: space-between;
+  color: var(--greyblue);
+}
+
+.footer-line {
+  position: relative;
+}
+
+.footer-line::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--white);
+}
+
+/*? ====================== FOOTER LOGO ============================   */
+
+.footer__logo-img {
+  width: 60px;
+  height: 60px;
+}
+.footer__logo-txt {
+  font-size: 30px;
+}
+
+/*? ================================ FOOTER ICON ================================ */
+
+.fa-brands {
+  margin: 0 10px;
+  font-size: 40px;
+}
+
+/*? ================================ FOOTER INFO ================================ */
+.footer-info_inner {
+  position: relative;
+  font-weight: 600;
+}
+
+.footer-info_inner:after {
+  content: "";
+  position: absolute;
+  top: calc(100% + 2px);
+  display: block;
+  width: 100%;
+  height: 0px;
+  background-color: var(--white);
+  transition: all 0.15s ease;
+}
+.footer-info_inner:hover::after {
+  height: 2px;
+}
+
+/** ======================= ADAPTIVE ==============================  */
+@media (max-width: 1300px) {
+  /* Изменения */
+  .form__item {
+    width: 42%;
+  }
+  .min__loan {
+    font-size: 12px;
+  }
+
+  .max__loan {
+    font-size: 12px;
+  }
+}
+@media (max-width: 992px) {
+  /*! ================= HEADER ====================  */
+  .header__nav {
+    gap: 17px;
+    padding: 10px 30px;
+  }
+
+  /*? ====================== LOGO ============================   */
+
+  .logo-img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .logo-txt {
+    font-size: 18px;
+  }
+
+  /*? ====================== INFO ============================   */
+  .info {
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    flex-direction: column;
+
+    width: 100%;
+    height: min-content;
+    padding: 13px;
+
+    border-top: 2px solid rgba(255, 255, 255, 0.45);
+    background-color: #19193d;
+
+    transform: translateX(-100%);
+    transition: all 0.2s;
+    font-size: 18px;
+  }
+
+  .info_inner {
+    margin: 13px;
+  }
+
+  .info_inner::after {
+    display: none;
+  }
+
+  .show {
+    transform: translateX(0);
+  }
+
+  /*? ====================== ICONS ============================   */
+
+  .fa-solid {
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  .fa-xmark {
+    font-size: 23px;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  /** ====================== Login--Logout ============================   */
+  .Login--Logout {
+    font-size: 16px;
+    padding: 4px 8px;
+  }
+  .userNow {
+    font-size: 16px;
+  }
+
+  .sucExit {
+    font-size: 16px;
+    padding: 14px 8px;
+  }
+
+  /*? ====================== SEARCH BAR ============================   */
+
+  .searchbar {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+    width: 100%;
+    height: 100px;
+    padding: 0 50px;
+
+    background-color: #19193d;
+    box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.3);
+
+    transform: translateY(-100%);
+    transition: all 0.15s ease;
+  }
+
+  .searcher {
+    background: transparent;
+    outline: none;
+    border: none;
+
+    width: 100%;
+    font-size: 20px;
+  }
+
+  /*! ================================ CONTENT ================================  */
+  /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ПИСАТЬ ТУТ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+  #user {
+    width: 30%;
+  }
+  #email {
+    width: 30%;
+  }
+  #password {
+    width: 30%;
+  }
+  .card {
+    font-size: 15px;
+  }
+  .card2 {
+    font-size: 15px;
+  }
+  .button__credit {
+    font-size: 15px;
+  }
+  .form__item {
+    width: 90%;
+  }
+  .container__count {
+    flex-direction: column;
+  }
+  .count {
+    font-size: 15px;
+    width: 90%;
+  }
+  .name__count {
+    font-size: 10px;
+  }
+
+  .popUp {
+    font-size: 17px;
+    padding: 15px 9px;
+  }
+  /*! ================================ FOOTER ================================ */
+
+  .footer {
+    height: 190px;
+    margin-top: 48px;
+    padding: 28px 18px;
+  }
+
+  .footer-line::before {
+    top: -28px;
+    background-color: var(--white);
+  }
+
+  /*? ====================== FOOTER LOGO ============================   */
+
+  .footer__logo-img {
+    width: 58px;
+    height: 58px;
+  }
+
+  /*? ================================ FOOTER ICON ================================ */
+
+  .fa-brands {
+    margin: 0 10px;
+    font-size: 38px;
+  }
+
+  /*? ================================ FOOTER INFO ================================ */
+
+  .footer-info_inner:after {
+    background-color: var(--white);
+  }
+}
+
+/****************************************************************************************************/
+@media (max-width: 780px) {
+  /*! ================= HEADER ====================  */
+  .header__nav {
+    gap: 15px;
+    padding: 8px 27px;
+  }
+
+  /*? ====================== LOGO ============================   */
+
+  .logo-img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .logo-txt {
+    font-size: 16px;
+  }
+
+  /*? ====================== INFO ============================   */
+  .info {
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .info_inner {
+    margin: 12px;
+  }
+
+  /*? ====================== ICONS ============================   */
+
+  .fa-solid {
+    font-size: 16px;
+  }
+  .fa-xmark {
+    font-size: 21px;
+  }
+
+  /** ====================== Login--Logout ============================   */
+  .Login--Logout {
+    font-size: 14px;
+    padding: 3px 7px;
+  }
+  .userNow {
+    font-size: 14px;
+  }
+
+  /*? ====================== SEARCH BAR ============================   */
+  .searchbar {
+    height: 90px;
+    padding: 0 45px;
+  }
+
+  .searcher {
+    font-size: 18px;
+  }
+
+  /*! ================================ CONTENT ================================  */
+  /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ПИСАТЬ ТУТ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+  #user {
+    width: 90%;
+  }
+  #email {
+    width: 90%;
+  }
+  #password {
+    width: 90%;
+  }
+  .button__credit {
+    width: 90%;
+  }
+  .count {
+    width: 90%;
+  }
+  .text__container {
+    padding: 20px;
+  }
+  .card {
+    font-size: 9px;
+  }
+  .card2 {
+    font-size: 9px;
+  }
+  #loan__inner {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  .form__item {
+    width: 100%;
+  }
+  h2 {
+    font-size: 15px;
+  }
+  .loan__title {
+    font-size: 12px;
+  }
+  #credit {
+    font-size: 10px;
+  }
+  #sum {
+    font-size: 10px;
+  }
+  #month {
+    font-size: 10px;
+  }
+  #year {
+    font-size: 10px;
+  }
+  #indata {
+    font-size: 10px;
+  }
+  .button__credit {
+    font-size: 8px;
+  }
+
+  .popUp {
+    font-size: 17px;
+    padding: 15px 9px;
+  }
+  /*! ================================ FOOTER ================================ */
+  .footer {
+    height: 180px;
+    margin-top: 45px;
+    padding: 25px 15px;
+  }
+
+  .footer-line::before {
+    top: -25px;
+  }
+
+  /*? ====================== FOOTER LOGO ============================   */
+  .footer__logo-img {
+    width: 55px;
+    height: 55px;
+  }
+
+  /*? ================================ FOOTER ICON ================================ */
+  .fa-brands {
+    margin: 0 9px;
+    font-size: 35px;
+  }
+
+  /*? ================================ FOOTER INFO ================================ */
+}
+
+/****************************************************************************************************/
+@media (max-width: 576px) {
+  /*! ================= HEADER ====================  */
+  .header__nav {
+    gap: 13px;
+    padding: 6px 26px;
+  }
+
+  /*? ====================== LOGO ============================   */
+
+  .logo-img {
+    width: 34px;
+    height: 34px;
+  }
+
+  .logo-txt {
+    font-size: 14px;
+  }
+
+  /*? ====================== INFO ============================   */
+  .info {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .info_inner {
+    margin: 10px;
+  }
+
+  /*? ====================== ICONS ============================   */
+
+  .fa-solid {
+    font-size: 14px;
+  }
+  .fa-xmark {
+    font-size: 19px;
+  }
+
+  /** ====================== Login--Logout ============================   */
+  .Login--Logout {
+    font-size: 12px;
+    padding: 3px 7px;
+  }
+  .userNow {
+    font-size: 14px;
+  }
+  .sucExit {
+    font-size: 14px;
+    padding: 12px 6px;
+    width: 250px;
+  }
+  /*? ====================== SEARCH BAR ============================   */
+  .searchbar {
+    height: 85px;
+    padding: 0 40px;
+  }
+
+  .searcher {
+    font-size: 16px;
+  }
+
+  /*! ================================ CONTENT ================================  */
+  /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ПИСАТЬ ТУТ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+  #user {
+    width: 90%;
+  }
+  #email {
+    width: 90%;
+  }
+  #password {
+    width: 90%;
+  }
+  .popUp {
+    font-size: 15px;
+    padding: 13px 7px;
+  }
+  /*! ================================ FOOTER ================================ */
+  .footer {
+    height: min-content;
+    margin-top: 40px;
+    padding: 20px 10px;
+  }
+
+  .footer__inner {
+    flex-direction: column;
+  }
+
+  .footer-line::before {
+    display: none;
+  }
+
+  /*? ====================== FOOTER LOGO ============================   */
+  .footer__logo-img {
+    width: 50px;
+    height: 50px;
+  }
+
+  /*? ================================ FOOTER ICON ================================ */
+  .fa-brands {
+    margin: 8px;
+    font-size: 30px;
+  }
+
+  /*? ================================ FOOTER INFO ================================ */
+  .footer-info {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 350px) {
+  /*! ================= HEADER ====================  */
+  .header__nav {
+    gap: 10px;
+    padding: 4px 22px;
+  }
+
+  /*? ====================== LOGO ============================   */
+
+  .logo-img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .logo-txt {
+    font-size: 12px;
+  }
+
+  /*? ====================== INFO ============================   */
+  .info {
+    padding: 12px;
+    font-size: 12px;
+  }
+
+  .info_inner {
+    margin: 8px;
+  }
+
+  /*? ====================== ICONS ============================   */
+
+  .fa-solid {
+    font-size: 12px;
+  }
+  .fa-xmark {
+    font-size: 16px;
+  }
+
+  /** ====================== Login--Logout ============================   */
+  .Login--Logout {
+    font-size: 10px;
+    padding: 2px 6px;
+  }
+  .userNow {
+    font-size: 10px;
+  }
+
+  /*? ====================== SEARCH BAR ============================   */
+  .searchbar {
+    height: 80px;
+    padding: 0 35px;
+  }
+
+  .searcher {
+    font-size: 14px;
+  }
+
+  /*! ================================ CONTENT ================================  */
+
+  /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ПИСАТЬ ТУТ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+  /*! ================================ FOOTER ================================ */
+  .footer {
+    /* height: 165px; */
+    margin-top: 35px;
+    padding: 17px 8px;
+  }
+
+  /*? ====================== FOOTER LOGO ============================   */
+  .footer__logo-img {
+    width: 45px;
+    height: 45px;
+  }
+
+  /*? ================================ FOOTER ICON ================================ */
+  .fa-brands {
+    margin: 8px;
+    font-size: 27px;
+  }
+
+  /*? ================================ FOOTER INFO ================================ */
+}

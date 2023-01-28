@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <title>CredBank.uz</title>
+  </head>
+  <body>
+    <!--! ================================ PRELOADER ================================ -->
+    <div class="preloader"></div>
+
+    <!--! ================================ HEADER ================================ -->
+    <div class="sucExit">Вы успешно вышли из аккаунта!</div>
+    <header class="header">
+      <nav class="header__nav">
+        <a class="logo" href="index.html">
+          <img
+            class="logo-img"
+            src="https://img.icons8.com/officel/80/null/merchant-account.png"
+          />
+          <div class="logo-txt">CredBank.uz</div>
+        </a>
+
+        <div class="info">
+          <div class="info_inner"><a href="index.html">Главная</a></div>
+          <div class="info_inner">
+            <a href="info page/info.html#aboutUs">О Нас</a>
+          </div>
+          <div class="info_inner"><a href="credit/credit.html">Кредиты</a></div>
+          <div class="info_inner">
+            <a href="info page/info.html#reklama">Реклама</a>
+          </div>
+          <div class="info_inner">
+            <a href="info page/info.html#voprosi">Вопросы</a>
+          </div>
+        </div>
+        <div class="icons">
+          <div class="search">
+            <i id="searchIcon" class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <div class="burger"><i class="fa-solid fa-bars"></i></div>
+          <a href="login page/login.html" class="login" id="Login"
+            ><div class="Login--Logout">Войти</div></a
+          >
+          <div class="Login--Logout logout" id="Logout">Выйти</div>
+          <div class="userNow"></div>
+        </div>
+      </nav>
+    </header>
+
+    <!--? ================================ SAERCH BAR ================================ -->
+    <div class="searchbar">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input class="searcher" type="text" placeholder="Поиск по сайту" />
+      <i id="searchXmark" class="fa-solid fa-xmark"></i>
+    </div>
+
+    <!--todo ================================ CONTENT ================================ -->
+    <!--? ================================ BIG IMG ================================ -->
+
+    <div class="BigImg">
+      <div class="BigImg__text">
+        Получите кредит для роста вашего бизнеса или стартапа
+      </div>
+    </div>
+
+    <!--? ================================ BENEFITS ================================ -->
+    <div class="benefits">
+      <h2 class="benefits__title">Преимущества проекта CredBank.uz</h2>
+      <div class="benefits__content">
+        <!-- cards was made by JS.map()   :D -->
+      </div>
+    </div>
+
+    <!--? ================================ SOME TXT ================================ -->
+
+    <div class="someTxt">
+      <h2 class="someTxt-h2">
+        CredBank.uz – ваш проводник в мире финансово-кредитных услуг
+      </h2>
+      <p class="someTxt-p">
+        CredBank.uz — независимый финансовый портал, который помогает людям
+        выдачей кредитов с выгодными процентными ставками. Портал был основан в
+        феврале 2005 году с целью освещения финансового рынка Республики
+        Узбекистан.
+        <br />
+        Ежедневно на портале обновляются обменные и официальные курсы валют.
+      </p>
+    </div>
+
+    <!--? ================================ KURS ================================ -->
+    <div class="kurs">
+      <div class="kurs__inner kurs__title">Курсы ЦБ РУз</div>
+      <div class="kurs__inner">
+        <img class="chart" src="img/green.png" alt="" /> USD
+        <span class="price">11205.25</span>
+      </div>
+      <div class="kurs__inner">
+        <img class="chart" src="img/red.png" alt="" /> RUB
+        <span class="price">157.23</span>
+      </div>
+      <div class="kurs__inner">
+        <img class="chart" src="img/green.png" alt="" /> EUR
+        <span class="price">11908.32</span>
+      </div>
+      <div class="kurs__inner">
+        <img class="chart" src="img/red.png" alt="" /> GBP
+        <span class="price">13526.47</span>
+      </div>
+    </div>
+
+    <!--! ================================ ABOUT US ================================ -->
+
+    <!--! ================================ FOOTER ================================ -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <a class="logo" href="index.html">
+          <img
+            class="footer__logo-img"
+            src="https://img.icons8.com/officel/80/null/merchant-account.png"
+          />
+          <div class="footer__logo-txt">CredBank.uz</div>
+        </a>
+
+        <div class="footer-icon">
+          <a href="#"><i class="fa-brands fa-telegram"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+      </div>
+
+      <div class="footer__inner footer-line">
+        <span class="mark">© 2005 - 2023, CredBank.uz</span>
+        <div class="footer-info">
+          <div class="footer-info_inner">
+            <a href="info page/info.html#aboutUs">О нас</a>
+          </div>
+          <div class="footer-info_inner">
+            <a href="polzsogl/polzsogl.html">Пользовательское соглашение</a>
+          </div>
+          <div class="footer-info_inner">
+            <a href="info page/info.html#reeklama">Реклама</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!--* ================================ SCRIPTS ================================ -->
+    <script
+      type="text/javascript"
+      src="https://npmcdn.com/parse/dist/parse.min.js"
+    ></script>
+    <script>
+      Parse.initialize(
+        "epRZqkwVHdUIbxiBWDPhPWwZKUZpVi6TwadmpYtX",
+        "0t7RFvlKMbRhA5neKA68y8ao2st9PxAxqU6iXfAG"
+      );
+      Parse.serverURL = "https://parseapi.back4app.com/";
+    </script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

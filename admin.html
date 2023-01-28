@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="admin/admin.css" />
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <div class="login__layer">
+      <form class="login__content">
+        <a class="logo" href="index.html">
+          <img
+            class="logo-img"
+            src="https://img.icons8.com/officel/80/null/merchant-account.png"
+          />
+          <div class="logo-txt">CredBank.uz</div>
+        </a>
+        <div class="login__inner">
+          <input
+            class="input"
+            id="username"
+            type="text"
+            placeholder="Username"
+          />
+        </div>
+        <div class="login__inner">
+          <input
+            class="input"
+            id="password"
+            type="password"
+            placeholder="Password"
+          />
+        </div>
+        <button id="submit" type="submit">Login</button>
+        <a href="index.html">
+          <i id="goback" class="fa-solid fa-xmark"></i>
+        </a>
+      </form>
+    </div>
+    <!--! ========================= CONTENT ========================  -->
+    <div class="divForTable">
+      <table class="user-data">
+        <thead class="user-data-header">
+          <tr class="user-header-row">
+            <th>objectId</th>
+            <th>username</th>
+            <th>createdAt</th>
+            <th>email</th>
+            <th>type</th>
+            <th>year%</th>
+            <th>sum</th>
+            <th>Credit term</th>
+            <th>Заявка</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+      <div class="popUp"></div>
+    </div>
+    <!--* ================================ SCRIPTS ================================ -->
+    <script
+      type="text/javascript"
+      src="https://npmcdn.com/parse/dist/parse.min.js"
+    ></script>
+    <script>
+      Parse.initialize(
+        "epRZqkwVHdUIbxiBWDPhPWwZKUZpVi6TwadmpYtX",
+        "0t7RFvlKMbRhA5neKA68y8ao2st9PxAxqU6iXfAG"
+      );
+      Parse.serverURL = "https://parseapi.back4app.com/";
+    </script>
+    <script src="admin/admin.js"></script>
+  </body>
+</html>

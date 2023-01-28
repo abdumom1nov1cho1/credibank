@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="login.css" />
+    <title>Регистрация</title>
+  </head>
+  <body>
+    <div class="login__layer">
+      <!-- ! SINGUP -->
+      <form class="login__content singup">
+        <a class="logo" href="../index.html">
+          <img
+            class="logo-img"
+            src="https://img.icons8.com/officel/80/null/merchant-account.png"
+          />
+          <div class="logo-txt">CredBank.uz</div>
+        </a>
+        <div class="login__inner">
+          <input
+            class="input"
+            id="username"
+            type="text"
+            placeholder="Username"
+          />
+        </div>
+        <div class="login__inner">
+          <input
+            class="input"
+            id="email"
+            type="email"
+            placeholder="exapmle@email.com"
+          />
+        </div>
+        <div class="login__inner">
+          <input
+            class="input"
+            id="password"
+            type="password"
+            placeholder="Password"
+          />
+        </div>
+        <button id="singUp" type="submit">Зарегистрироваться</button>
+        <button id="already">Уже есть аккаунт?</button>
+        <a href="../index.html">
+          <i id="goback" class="fa-solid fa-xmark"></i>
+        </a>
+      </form>
+      <div class="sucLogin">Вы успешно зарегистрировались!</div>
+      <!-- ! LOGIN -->
+      <form class="login__content login none">
+        <a class="logo" href="../index.html">
+          <img
+            class="logo-img"
+            src="https://img.icons8.com/officel/80/null/merchant-account.png"
+          />
+          <div class="logo-txt">CredBank.uz</div>
+        </a>
+        <div class="login__inner">
+          <input
+            class="input"
+            id="usernameIn"
+            type="text"
+            placeholder="Username"
+          />
+        </div>
+        <div class="login__inner">
+          <input
+            class="input"
+            id="emailIn"
+            type="email"
+            placeholder="exapmle@email.com"
+          />
+        </div>
+        <div class="login__inner">
+          <input
+            class="input"
+            id="passwordIn"
+            type="password"
+            placeholder="Password"
+          />
+        </div>
+        <button id="logIn" type="submit">Войти</button>
+        <a href="../index.html"
+          ><div id="gomain">Вернуться на главную</div></a
+        >
+        <a href="../index.html">
+          <i id="goback" class="fa-solid fa-xmark"></i>
+        </a>
+      </form>
+      <div class="sucSingup">Вы успешно вошли в аккаунт!</div>
+    </div>
+    <!--! SCRIPTS  -->
+    <script
+      type="text/javascript"
+      src="https://npmcdn.com/parse/dist/parse.min.js"
+    ></script>
+    <script>
+      Parse.initialize(
+        "epRZqkwVHdUIbxiBWDPhPWwZKUZpVi6TwadmpYtX",
+        "0t7RFvlKMbRhA5neKA68y8ao2st9PxAxqU6iXfAG"
+      );
+      Parse.serverURL = "https://parseapi.back4app.com/";
+    </script>
+    <script src="login.js"></script>
+  </body>
+</html>

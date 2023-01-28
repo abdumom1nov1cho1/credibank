@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="info.css" />
+    <title>CredBank.uz</title>
+  </head>
+  <body>
+    <!--! ================================ PRELOADER ================================ -->
+    <div class="preloader"></div>
+
+    <!--! ================================ HEADER ================================ -->
+    <div class="sucExit">Вы успешно вышли из аккаунта!</div>
+    <header class="header">
+      <nav class="header__nav">
+        <a class="logo" href="../index.html">
+          <img
+            class="logo-img"
+            src="https://img.icons8.com/officel/80/null/merchant-account.png"
+          />
+          <div class="logo-txt">CredBank.uz</div>
+        </a>
+
+        <div class="info">
+          <div class="info_inner"><a href="../index.html">Главная</a></div>
+          <div class="info_inner"><a href="#aboutUs">О Нас</a></div>
+          <div class="info_inner"><a href="../credit/credit.html">Кредиты</a></div>
+          <div class="info_inner"><a href="#reeklama">Реклама</a></div>
+          <div class="info_inner"><a href="#voprosi">Вопросы</a></div>
+        </div>
+        <div class="icons">
+          <div class="search">
+            <i id="searchIcon" class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <div class="burger"><i class="fa-solid fa-bars"></i></div>
+          <a href="../login page/login.html" class="login" id="Login"
+            ><div class="Login--Logout">Войти</div></a
+          >
+          <div class="Login--Logout logout" id="Logout">Выйти</div>
+          <div class="userNow"></div>
+        </div>
+      </nav>
+    </header>
+
+    <!--? ================================ SAERCH BAR ================================ -->
+    <div class="searchbar">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input class="searcher" type="text" placeholder="Поиск по сайту" />
+      <i id="searchXmark" class="fa-solid fa-xmark"></i>
+    </div>
+
+    <!--todo ================================ CONTENT ================================ -->
+
+    <div class="contentonas">
+      <div class="Onas">
+        <h2><strong id="aboutUs">О нас</strong></h2>
+      </div>
+      <div class="textonas">
+        <p>О проекте</p>
+        <p>
+          CredBank.uz – это финансовый гипермаркет, который объединяет в себе
+          доступ ко всем финансовым услугам на рынке Узбекистана. На портале
+          представлена самая крупная база финансовых продуктов и услуг (кредиты,
+          курсы валют и многое другое).
+        </p>
+        <p>
+          CredBank.uz – один из старейших в Узбекистане информационных ресурсов
+          о банковских услугах. Портал успешно ведет свою деятельность с 2005
+          года. С нами сотрудничают большинство банков и других компаний которые
+          оказывают финансовые услуги населению.
+        </p>
+        <p>
+          CredBank.uz позволяет легко и быстро найти самые выгодные предложения
+          по вкладам, кредитам, международным пластиковым картам, страховкам и
+          другим финансовым продуктам. Наш портал поможет вам сэкономить не
+          только деньги, но и время. Теперь нет нужды в том, чтобы искать
+          информацию на сайтах банков и других финансовых компаний и принимать
+          важные решения без полного понимания всех нюансов финансовых услуг.
+        </p>
+      </div>
+    </div>
+
+    <div class="contentrek">
+      <div class="reeklama">
+        <h2><strong id="reeklama">Реклама</strong></h2>
+      </div>
+
+      <div class="tekstrek">
+        <p>Размещение рекламы и информации об организациях</p>
+        <p>
+          Вы можете разместить на портале Bank.uz информацию о своей финансовая
+          организации, ее продуктах, а также рекламу в различных современных
+          медийных форматах.
+        </p>
+        <p>
+          Прайс-листы по размещению рекламы предоставляются по запросу. Для
+          этого напишите запрос на почту info@cred_bank.uz или телеграм
+          @cred_bank_bot
+        </p>
+        <p>
+          При запросе агентством, необходимо указывать наименование клиента.
+        </p>
+        <p>
+          Также вы можете разместить рекламу на всех сайтах партнерской сети
+          Chevrolet, включая торговую площадку CredBank.uz, Apple.uz,
+          Samsung.uz, Sony.uz и так далее. Общий охват аудитории сайтов сети
+          Atlas Media составляет 2.5 миллиона человек.
+        </p>
+      </div>
+    </div>
+    <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Suiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  -->
+
+    <div class="accordion" id="accordionExample">
+      <div class="voprosi">
+        <h2><strong id="voprosi">Часто задаваемые вопросы</strong></h2>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseOne"
+            aria-expanded="true"
+            aria-controls="collapseOne"
+          >
+            Какие виды обеспечения могут быть представлены банку при получении
+            кредита в коммерческом банке?
+          </button>
+        </h2>
+        <div
+          id="collapseOne"
+          class="accordion-collapse collapse close"
+          aria-labelledby="headingOne"
+          data-bs-parent="#accordionExample"
+        >
+          <div class="accordion-body">
+            <strong
+              >Заемщик может предоставить банку один или несколько из следующих
+              видов обеспечения:
+            </strong>
+
+            <ul>
+              <li>залог имущества или ценных бумаг;</li>
+              <li>гарантия банка или страховой организации;</li>
+              <li>поручительство третьей стороны;</li>
+              <li>
+                страховой полис по страхованию риска невозврата кредита
+                заёмщиком.
+              </li>
+            </ul>
+
+            <p>
+              Имущество, приобретенное за кредитные средства, может служить
+              обеспечением по этому кредиту в размере 80 процентов его
+              стоимости.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseTwo"
+            aria-expanded="true"
+            aria-controls="collapseOne"
+          >
+            Может ли банк в одностороннем порядке изменить процентную ставку по
+            кредитам?  В каких случаях можно изменить процентную ставку по
+            кредиту?
+          </button>
+        </h2>
+        <div
+          id="collapseTwo"
+          class="accordion-collapse collapse close"
+          aria-labelledby="headingOne"
+          data-bs-parent="#accordionExample"
+        >
+          <div class="accordion-body">
+            <strong> </strong>
+            <p>
+              Коммерческие банки не могут допускать односторонних изменений
+              условий кредитного договора, которые ограничивают права и / или
+              увеличивают обязательства заемщика, например, повышение процентной
+              ставки по кредиту. Кредиты под базовую ставку ЦБ являются
+              исключением. В соответствии с основной ставкой, процентные ставки
+              по данным кредитам могут поменяться и это прописывается в
+              договоре. Внимательно читайте условия договора.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseThree"
+            aria-expanded="true"
+            aria-controls="collapseOne"
+          >
+            Что такое полная стоимость кредита?
+          </button>
+        </h2>
+        <div
+          id="collapseThree"
+          class="accordion-collapse collapse close"
+          aria-labelledby="headingOne"
+          data-bs-parent="#accordionExample"
+        >
+          <div class="accordion-body">
+            <p>
+              Полная стоимость кредита (ПСК) – это процентная ставка в
+              достоверном, годовом и эффективном исчислении, при расчете которой
+              учитываются платежи заемщика, связанные с получением
+              потребительского кредита или займа. На сегодняшний день все банки
+              указывают размер полной стоимости кредита в договорах по выдаче
+              потребительских кредитов, заключаемых с заемщиками.
+            </p>
+            <strong
+              >В расчет полной стоимости кредита включаются следующие платежи
+              заемщика:
+            </strong>
+            <ul>
+              <li>по основному долгу и процентам;</li>
+              <li>
+                в пользу банка - кредитора, если обязанность заемщика по таким
+                платежам следует из условий договора и (или) если выдача кредита
+              </li>
+              <li>
+                в пользу третьих лиц, если обязанность заемщика по уплате таких
+                платежей следует из условий договора, в том числе платежи:
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseFour"
+            aria-expanded="true"
+            aria-controls="collapseOne"
+          >
+            Что такое рефинансирование кредита?
+          </button>
+        </h2>
+        <div
+          id="collapseFour"
+          class="accordion-collapse collapse close"
+          aria-labelledby="headingOne"
+          data-bs-parent="#accordionExample"
+        >
+          <div class="accordion-body">
+            <strong>Рефинансирование кредита </strong>
+            <p>
+              Это погашение первоначального кредита путём заключения нового
+              кредитного договора, обычно на более привлекательных условиях
+              (процентная ставка, срок кредитования). Говоря простым языком, это
+              кредит, который берется на погашение старого кредита.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseFive"
+            aria-expanded="true"
+            aria-controls="collapseOne"
+          >
+            Могу ли я получить ипотечный кредит без первоначального взноса?
+          </button>
+        </h2>
+        <div
+          id="collapseFive"
+          class="accordion-collapse collapse close"
+          aria-labelledby="headingOne"
+          data-bs-parent="#accordionExample"
+        >
+          <div class="accordion-body">
+            <strong> </strong>
+            <p>
+              Нет, так как наличие первоначального взноса при получении
+              ипотечного кредита регламентировано законодательством.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseSix"
+            aria-expanded="true"
+            aria-controls="collapseOne"
+          >
+            Через платформу CredBank.uz я подала заявку на получение кредита на
+            изготовление швейных изделий в размере 36 миллионов сумов по
+            программе «Каждая семья - предприниматель». После рекомендации
+            руководителя сектора и положительного заключения районного Центра по
+            поддержке семейного предпринимательства, банк сообщил мне, что
+            предоставит кредит на 24 миллиона сумов. Какое могло быть основание
+            для принятия такого решения?
+          </button>
+        </h2>
+        <div
+          id="collapseSix"
+          class="accordion-collapse collapse close"
+          aria-labelledby="headingOne"
+          data-bs-parent="#accordionExample"
+        >
+          <div class="accordion-body">
+            <strong
+              >В ходе рассмотрения заявок соовтетствующие организации учитывают
+              следующее:
+            </strong>
+            <p>
+              Имеется ли у заявителя условия и возможность заниматься
+              предпринимательской деятельностью обладает ли заявитель
+              достаточными знаниями и опытом кредитная история и скоринг
+              заявителя актуальный спрос и потребность в реализации проекта
+              анализ поставщиков и конкурентоспособность
+            </p>
+            <p>
+              Если коммерческий банк частично удовлетворяет или отклоняет
+              заявку, он предоставляет ответ в письменной форме с обоснованием.
+              Если по заявке будет принято положительное решение, будет подписан
+              кредитный договор.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--! ================================ FOOTER ================================ -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <a class="logo" href="../index.html">
+          <img
+            class="footer__logo-img"
+            src="https://img.icons8.com/officel/80/null/merchant-account.png"
+          />
+          <div class="footer__logo-txt">CredBank.uz</div>
+        </a>
+
+        <div class="footer-icon">
+          <a href="#"><i class="fa-brands fa-telegram"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+      </div>
+
+      <div class="footer__inner footer-line">
+        <span class="mark">© 2005 - 2023, CredBank.uz</span>
+        <div class="footer-info">
+          <div class="footer-info_inner"><a href="#aboutUs">О нас</a></div>
+          <div class="footer-info_inner">
+            <a href="../polzsogl/polzsogl.html">Пользовательское соглашение</a>
+          </div>
+          <div class="footer-info_inner"><a href="#reeklama">Реклама</a></div>
+        </div>
+      </div>
+    </footer>
+
+    <!--* ================================ SCRIPTS ================================ -->
+    <script
+      type="text/javascript"
+      src="https://npmcdn.com/parse/dist/parse.min.js"
+    ></script>
+    <script>
+      Parse.initialize(
+        "epRZqkwVHdUIbxiBWDPhPWwZKUZpVi6TwadmpYtX",
+        "0t7RFvlKMbRhA5neKA68y8ao2st9PxAxqU6iXfAG"
+      );
+      Parse.serverURL = "https://parseapi.back4app.com/";
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="info.js"></script>
+  </body>
+</html>

@@ -1,0 +1,188 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: rgb(231, 238, 255);
+}
+
+.login__layer {
+  position: absolute;
+
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #f8f9fd;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.login__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  padding: 48px;
+
+  border-radius: 10px;
+
+  background-color: white;
+  box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 40px;
+}
+
+.logo-img {
+  width: 70px;
+  height: 70px;
+}
+
+.logo-txt {
+  font-size: 22px;
+}
+
+.login__inner {
+  width: 100%;
+
+  margin-bottom: 20px;
+}
+
+.input {
+  border: none;
+  outline: none;
+
+  width: 100%;
+  padding: 12px 6px;
+
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+#gomain,
+#already,
+#logIn,
+#singUp {
+  border: none;
+  outline: none;
+
+  width: 100%;
+  padding: 16px 6px;
+
+  border-radius: 5px;
+
+  background-color: #1089ff;
+  color: white;
+
+  cursor: pointer;
+}
+#gomain,
+#already {
+  margin-top: 8px;
+  text-align: center;
+  font-size: 13.3px;
+  font-family: "Lato", Arial, sans-serif;
+}
+
+#goback {
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  font-size: 25px;
+}
+
+.sucSingup,
+.sucLogin {
+  position: absolute;
+  font-size: 18px;
+  padding: 16px 10px;
+
+  border-radius: 10px;
+  border: 1px solid green;
+
+  background-color: rgb(58, 209, 58);
+
+  opacity: 0;
+  z-index: -1;
+
+  transition: all 0.5s ease;
+}
+
+.success {
+  opacity: 1;
+  z-index: 999;
+}
+
+.none {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .logo-img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .logo-txt {
+    font-size: 21px;
+  }
+}
+@media (max-width: 780px) {
+  .logo-img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .logo-txt {
+    font-size: 20px;
+  }
+}
+@media (max-width: 576px) {
+  .logo-img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .logo-txt {
+    font-size: 19px;
+  }
+}
+@media (max-width: 400px) {
+  .login__content {
+    padding: 24px;
+  }
+
+  .logo {
+    gap: 8px;
+    margin-bottom: 30px;
+  }
+  .login__inner {
+    margin-bottom: 14px;
+  }
+
+  .input {
+    padding: 10px 5px;
+  }
+  #already,
+  #logIn,
+  #singUp {
+    padding: 14px 5px;
+  }
+
+}

@@ -1,0 +1,339 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: rgb(231, 238, 255);
+}
+
+.login__layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #f8f9fd;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.login__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  padding: 48px;
+
+  border-radius: 10px;
+
+  background-color: white;
+  box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 40px;
+}
+
+.logo-img {
+  width: 70px;
+  height: 70px;
+}
+
+.logo-txt {
+  font-size: 22px;
+}
+
+.login__inner {
+  width: 100%;
+
+  margin-bottom: 20px;
+}
+
+.input {
+  border: none;
+  outline: none;
+
+  width: 100%;
+  padding: 12px 6px;
+
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+#submit {
+  border: none;
+  outline: none;
+
+  width: 100%;
+  padding: 16px 6px;
+
+  border-radius: 5px;
+
+  background-color: #1089ff;
+  color: white;
+}
+
+#submit:hover {
+  background-color: rgb(132, 132, 132);
+}
+
+#goback {
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  font-size: 25px;
+  color: #000;
+}
+
+/*! ========================= CONTENT ======================== */
+
+.popUp {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  font-size: 18px;
+  padding: 16px 10px;
+
+  border-radius: 10px;
+
+  border: 1px solid black;
+  margin: 0 auto;
+
+  opacity: 0;
+  z-index: -1;
+
+  transform: translateX(-50%);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.popUpNone {
+  opacity: 1;
+  z-index: 999;
+}
+/*! user-data */
+
+.divForTable {
+  width: 95%;
+  margin: 30px auto;
+}
+
+.user-data {
+  width: 100%;
+  text-align: center;
+
+  border-radius: 10px;
+  border-collapse: collapse;
+
+  overflow: auto;
+}
+
+.user-data-header {
+  background: #36304a;
+  color: #fff;
+  height: 40px;
+}
+
+tbody {
+  background-color: #fff;
+}
+
+.tr {
+  height: 30px;
+}
+
+th,
+td {
+  padding: 10px 5px;
+  font-size: 16px;
+}
+
+.bad,
+.nice {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 30px;
+  height: 30px;
+
+  margin: 2px;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+.bad {
+  background-color: #ff0000;
+}
+
+.nice {
+  background-color: #30a930;
+}
+
+.fa-solid {
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+}
+
+.dead {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .logo-img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .logo-txt {
+    font-size: 21px;
+  }
+}
+
+@media (max-width: 780px) {
+  .divForTable {
+    width: 95%;
+
+    overflow-x: auto;
+  }
+
+  .logo-img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .logo-txt {
+    font-size: 20px;
+  }
+  /*! user-data */
+
+  .divForTable {
+    margin: 25px auto;
+  }
+
+  .user-data-header {
+    height: 35px;
+  }
+
+  .tr {
+    height: 27px;
+  }
+
+  th,
+  td {
+    padding: 9px 4px;
+    font-size: 15px;
+  }
+
+  .bad,
+  .nice {
+    width: 28px;
+    height: 28px;
+  }
+
+  .fa-solid {
+    font-size: 18px;
+  }
+
+  .popUp {
+    font-size: 17px;
+    padding: 15px 9px;
+  }
+}
+@media (max-width: 576px) {
+  .logo-img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .logo-txt {
+    font-size: 19px;
+  }
+  /*! user-data */
+
+  .divForTable {
+    margin: 23px auto;
+  }
+
+  .user-data-header {
+    height: 30px;
+  }
+
+  .tr {
+    height: 25px;
+  }
+
+  th,
+  td {
+    padding: 8px 4px;
+    font-size: 14px;
+  }
+
+  .bad,
+  .nice {
+    width: 25px;
+    height: 25px;
+  }
+
+  .fa-solid {
+    font-size: 15px;
+  }
+  .popUp {
+    font-size: 17px;
+    padding: 15px 9px;
+  }
+}
+@media (max-width: 400px) {
+  /*! user-data */
+
+  .divForTable {
+    margin: 20px auto;
+  }
+
+  .user-data-header {
+    height: 27px;
+  }
+
+  .tr {
+    height: 23px;
+  }
+
+  th,
+  td {
+    padding: 7px 3px;
+    font-size: 13px;
+  }
+  .bad,
+  .nice {
+    width: 23px;
+    height: 23px;
+  }
+
+  .fa-solid {
+    font-size: 13px;
+  }
+
+  .popUp {
+    font-size: 15px;
+    padding: 13px 7px;
+  }
+}
